@@ -1,0 +1,176 @@
+---
+// Props que puede recibir el layout
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Seguridad Laboral con IA - Tu aliado inteligente para un futuro libre de accidentes" } = Astro.props;
+
+// Importar estilos directamente en el layout
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot /> <!-- Aquí se inserta el contenido de la página -->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Box Icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Script para inicializar AOS - Usando is:inline para evitar el procesamiento de TypeScript -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+      });
+    </script>
+
+    <!-- Script principal con tipo -->
+    <script>
+      // Script para el scroll y funcionalidades
+      document.addEventListener('DOMContentLoaded', () => {
+        let lastScrollTop = 0;
+        const header = document.querySelector("header") as HTMLElement;
+        const toTop = document.querySelector(".to-top") as HTMLElement;
+        const heroSection = document.querySelector(".hero") as HTMLElement;
+        const btnMenu = document.getElementById("btn-menu") as HTMLButtonElement;
+        const closeMobileNavBtn = document.querySelector(".close-mobile-nav") as HTMLButtonElement;
+        const navLinks = document.querySelectorAll("nav a, .mobile-nav a");
+
+        // Control de scroll para mostrar/ocultar el encabezado y el botón para subir
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const heroSectionHeight = heroSection?.offsetHeight || 0;
+
+          // Mostrar/ocultar botón para subir
+          if (toTop) {
+            if (scrollTop > heroSectionHeight / 2) {
+              toTop.classList.add("active");
+            } else {
+              toTop.classList.remove("active");
+            }
+          }
+
+          // Mostrar/ocultar encabezado al hacer scroll
+          if (header) {
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+              header.classList.add("hidden");
+            } else {
+              header.classList.remove("hidden");
+            }
+          }
+
+          // Actualizar posición de último scroll
+          lastScrollTop = scrollTop;
+        });
+
+        // Manejo del menú móvil
+        if (btnMenu) {
+          btnMenu.addEventListener("click", () => {
+            const mobileNav = document.querySelector(".mobile-nav") as HTMLElement;
+            if (mobileNav) {
+              mobileNav.classList.toggle("active");
+              document.body.style.overflow = "hidden"; // Prevenir scroll cuando el menú está abierto
+            }
+          });
+        }
+
+        if (closeMobileNavBtn) {
+          closeMobileNavBtn.addEventListener("click", () => {
+            const mobileNav = document.querySelector(".mobile-nav") as HTMLElement;
+            if (mobileNav) {
+              mobileNav.classList.remove("active");
+              document.body.style.overflow = ""; // Restaurar scroll
+            }
+          });
+        }
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            const mobileNav = document.querySelector(".mobile-nav") as HTMLElement;
+            if (mobileNav) {
+              mobileNav.classList.remove("active");
+              document.body.style.overflow = ""; // Restaurar scroll
+            }
+          });
+        });
+
+        // Botón para subir al inicio
+        if (toTop) {
+          toTop.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          });
+        }
+
+        // Efectos de parallax para el hero
+        window.addEventListener("mousemove", (e) => {
+          const mouseX = e.clientX / window.innerWidth;
+          const mouseY = e.clientY / window.innerHeight;
+          
+          const heroLight = document.querySelector(".hero .light") as HTMLElement;
+          
+          if (heroLight) {
+            heroLight.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+          }
+        });
+
+        // Validación simple de formulario
+        const contactForm = document.querySelector(".contact-form") as HTMLFormElement;
+        if (contactForm) {
+          contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const inputs = contactForm.querySelectorAll("input, textarea");
+            let isValid = true;
+            
+            inputs.forEach((input) => {
+              // Corrección del tipo de elemento para TypeScript
+              const inputElement = input as HTMLInputElement | HTMLTextAreaElement;
+              
+              if (inputElement.hasAttribute("required") && !inputElement.value.trim()) {
+                inputElement.style.borderColor = "#F1202F";
+                isValid = false;
+              } else {
+                inputElement.style.borderColor = "";
+              }
+            });
+            
+            if (isValid) {
+              // Aquí iría el código para enviar el formulario
+              alert("¡Gracias por contactarnos! Tu mensaje ha sido enviado correctamente.");
+              contactForm.reset();
+            } else {
+              alert("Por favor, completa todos los campos requeridos.");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

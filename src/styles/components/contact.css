@@ -1,0 +1,194 @@
+/* Estilos para la sección de contacto */
+.join {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 0;
+  }
+  
+  .join .container .content {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .join .container .content .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, rgba(66, 23, 108, 0.8), rgba(133, 34, 226, 0.4));
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 60px 40px;
+  }
+  
+  .join .container .content .wrapper .light-1 {
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: rgba(241, 32, 47, 0.2);
+    filter: blur(120px);
+  }
+  
+  .join .container .content .wrapper .light-2 {
+    position: absolute;
+    bottom: -30%;
+    right: -20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: rgba(133, 34, 226, 0.2);
+    filter: blur(120px);
+  }
+  
+  .join .container .content .wrapper .wrapper-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .join .container .content .wrapper .wrapper-content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .join .container .content .wrapper .wrapper-content .text h1 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+  
+  .join .container .content .wrapper .wrapper-content .text p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+  }
+  
+  /* Estilos del formulario */
+  .contact-form {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px 18px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(241, 32, 47, 0.25);
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .contact-form button {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary);
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+  }
+  
+  .contact-form button:active {
+    transform: translateY(0);
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .form-row {
+      flex-direction: row;
+    }
+    
+    .form-row .form-group {
+      flex: 1;
+    }
+    
+    .join .container .content .wrapper .wrapper-content .text h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .join .container .content .wrapper {
+      padding: 80px 60px;
+    }
+    
+    .join .container .content .wrapper .wrapper-content .text h1 {
+      font-size: 2.8rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 18px;
+    }
+  }

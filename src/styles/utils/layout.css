@@ -1,0 +1,79 @@
+/* Utilidades de layout y clases comunes */
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  
+  /* Botón para subir al inicio */
+  .to-top {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 8px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    fill: var(--primary);
+    transform: scale(0);
+    z-index: 99;
+    transition: all 0.2s linear;
+  }
+  
+  .to-top:hover {
+    background-color: var(--primary);
+    fill: var(--white);
+    transition: all 0.2s linear;
+  }
+  
+  .to-top.active {
+    transform: scale(1);
+    transition: all 0.2s linear;
+  }
+  
+  /* Media queries para container y elementos comunes */
+  @media (min-width: 450px) {
+    .container {
+      max-width: 450px;
+    }
+  }
+  
+  @media (min-width: 610px) {
+    .container {
+      max-width: 610px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding: 0 30px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1400px;
+      padding: 0 40px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1400px;
+      padding: 0 50px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1500px;
+      padding: 0 60px;
+    }
+  }

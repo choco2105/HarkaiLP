@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.5"
+    "aos": "^2.3.4",
+    "astro": "^5.7.5",
+    "boxicons": "^2.1.4"
   }
 }

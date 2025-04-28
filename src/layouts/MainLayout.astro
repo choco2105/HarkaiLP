@@ -29,21 +29,42 @@ import '../styles/global.css';
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- Definir variables CSS inline para asegurar que están disponibles -->
+    <style is:inline>
+      :root {
+        --primary: #F1202F;
+        --secondary: #990624;
+        --accent: #8522E2;
+        --dark: #42176C;
+        --black: #000000;
+        --white: #fff;
+        --gray: #7a7a7a;
+        --darkgray: #262626;
+        --lightgray: #a4a4a4;
+        --montserrat: "Montserrat", sans-serif;
+        --poppins: "Poppins", sans-serif;
+      }
+    </style>
+
     <title>{title}</title>
   </head>
   <body>
     <slot /> <!-- Aquí se inserta el contenido de la página -->
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- BoxIcons y AOS antes de los scripts personalizados -->
+    <script is:inline src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Box Icon -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-    <!-- Script para inicializar AOS - Usando is:inline para evitar el procesamiento de TypeScript -->
+    <!-- Script para inicializar AOS -->
     <script is:inline>
+      // Inicializar AOS cuando el DOM esté listo
       document.addEventListener('DOMContentLoaded', function() {
-        AOS.init();
+        console.log('Inicializando AOS...');
+        AOS.init({
+          duration: 1000,
+          once: false,
+          mirror: true
+        });
       });
     </script>
 
@@ -51,6 +72,8 @@ import '../styles/global.css';
     <script>
       // Script para el scroll y funcionalidades
       document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM cargado, inicializando funcionalidades...');
+        
         let lastScrollTop = 0;
         const header = document.querySelector("header") as HTMLElement;
         const toTop = document.querySelector(".to-top") as HTMLElement;
@@ -58,6 +81,11 @@ import '../styles/global.css';
         const btnMenu = document.getElementById("btn-menu") as HTMLButtonElement;
         const closeMobileNavBtn = document.querySelector(".close-mobile-nav") as HTMLButtonElement;
         const navLinks = document.querySelectorAll("nav a, .mobile-nav a");
+
+        // Debug de elementos
+        console.log('Header:', header);
+        console.log('ToTop:', toTop);
+        console.log('HeroSection:', heroSection);
 
         // Control de scroll para mostrar/ocultar el encabezado y el botón para subir
         window.addEventListener("scroll", () => {
@@ -89,6 +117,7 @@ import '../styles/global.css';
         // Manejo del menú móvil
         if (btnMenu) {
           btnMenu.addEventListener("click", () => {
+            console.log('Botón de menú clickeado');
             const mobileNav = document.querySelector(".mobile-nav") as HTMLElement;
             if (mobileNav) {
               mobileNav.classList.toggle("active");
@@ -99,6 +128,7 @@ import '../styles/global.css';
 
         if (closeMobileNavBtn) {
           closeMobileNavBtn.addEventListener("click", () => {
+            console.log('Botón cerrar menú clickeado');
             const mobileNav = document.querySelector(".mobile-nav") as HTMLElement;
             if (mobileNav) {
               mobileNav.classList.remove("active");

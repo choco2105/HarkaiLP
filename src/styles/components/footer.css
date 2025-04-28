@@ -1,0 +1,180 @@
+/* Estilos para el footer */
+footer {
+    min-height: 30vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(16, 16, 16, 1);
+    padding: 60px 0 30px;
+  }
+  
+  footer .container .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 30vh;
+  }
+  
+  footer .container .content .col-1, 
+  footer .container .content .col-2, 
+  footer .container .content .col-3, 
+  footer .container .content .col-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  footer .container .content .col-1 .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  
+  footer .container .content .col-1 .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  footer .container .content .col-1 .logo a {
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-family: var(--montserrat);
+  }
+  
+  footer .container .content .col-1 .logo .logo-hark {
+    color: var(--dark);
+  }
+  
+  footer .container .content .col-1 .logo .logo-ai {
+    color: var(--primary);
+  }
+  
+  footer .container .content .col-1 .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--lightgray);
+    font-size: 0.9rem;
+  }
+  
+  footer .container .content .col-1 .social {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  footer .container .content .col-1 .social a {
+    fill: var(--white);
+    width: 25px;
+    height: 25px;
+    transition: fill 0.3s;
+  }
+  
+  footer .container .content .col-1 .social a:hover {
+    fill: var(--primary);
+  }
+  
+  footer .container .content .col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  footer .container .content .col-right .col-2 p, 
+  footer .container .content .col-right .col-3 p, 
+  footer .container .content .col-right .col-4 p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--montserrat);
+  }
+  
+  footer .container .content .col-right .col-2 a, 
+  footer .container .content .col-right .col-3 a, 
+  footer .container .content .col-right .col-4 a {
+    text-decoration: none;
+    color: var(--lightgray);
+    transition: color 0.3s;
+  }
+  
+  footer .container .content .col-right .col-2 a:hover, 
+  footer .container .content .col-right .col-3 a:hover, 
+  footer .container .content .col-right .col-4 a:hover {
+    color: var(--primary);
+  }
+  
+  footer .partnership {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--darkgray);
+  }
+  
+  footer .partnership p {
+    color: var(--lightgray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  footer .partner-logo {
+    height: 60px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 610px) {
+    footer .container .content .col-1 p {
+      width: 75%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    footer .partnership {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    footer .partnership p {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    footer .container .content {
+      flex-direction: row;
+    }
+  
+    footer .container .content .col-1 {
+      width: 40%;
+    }
+  
+    footer .container .content .col-right {
+      width: 60%;
+      flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    footer .container .content .col-1 .logo a {
+      font-size: 1.5rem;
+    }
+  
+    footer .container .content .col-1 .contact-info {
+      font-size: 1rem;
+    }
+  
+    footer .container .content .col-right .col-2 p, 
+    footer .container .content .col-right .col-3 p, 
+    footer .container .content .col-right .col-4 p {
+      font-size: 1.3rem;
+    }
+  
+    footer .container .content .col-right .col-2 a, 
+    footer .container .content .col-right .col-3 a, 
+    footer .container .content .col-right .col-4 a {
+      font-size: 1rem;
+    }
+  }

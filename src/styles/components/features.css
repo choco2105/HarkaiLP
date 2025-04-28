@@ -1,0 +1,329 @@
+/* Estilos para la sección de características (Grid) */
+.grid {
+    min-height: 100vh;
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+  }
+  
+  .grid .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .grid .container .content .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border: 2px solid var(--darkgray);
+    border-top-color: var(--black);
+    border-bottom-color: var(--black);
+    border-radius: 16px;
+    transition: .2s linear;
+  }
+  
+  .grid .container .content .title:hover {
+    border-top-color: var(--darkgray);
+    border-bottom-color: var(--darkgray);
+    transition: .2s linear;
+  }
+  
+  .grid .container .content .title h1 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .grid .container .content .title .light-1 {
+    position: absolute;
+    left: -2px;
+    width: 2px;
+    height: 35%;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+  
+  .grid .container .content .title .light-2 {
+    position: absolute;
+    right: -2px;
+    width: 2px;
+    height: 35%;
+    background-color: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 10px var(--accent);
+  }
+  
+  .grid .container .content .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  .grid .container .content .grid-container .box {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: rgba(16, 16, 16, .5);
+    border: 2px solid var(--darkgray);
+    backdrop-filter: blur(50px);
+    border-radius: 16px;
+  }
+  
+  .grid .container .content .grid-container .box h1 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    color: var(--lightgray);
+    font-size: 1.8rem;
+  }
+  
+  .grid .container .content .grid-container .box h1 span {
+    color: var(--primary);
+  }
+  
+  .grid .container .content .grid-container .box p {
+    font-size: .9rem;
+    width: 85%;
+  }
+  
+  .grid .container .content .grid-container .box-6 {
+    padding: 2rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid .container .content .grid-container .box-2 .light,
+  .grid .container .content .grid-container .box-2 .rope,
+  .grid .container .content .grid-container .box-2 .star {
+    display: none;
+  }
+  
+  .grid .container .content .grid-container .box-6 button {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    width: 100%;
+    border: 2px solid var(--darkgray);
+    border-radius: 12px;
+    background-color: var(--primary);
+    padding: 20px 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  
+  .grid .container .content .grid-container .box-6 button::after {
+    content: "";
+    position: absolute;
+    transform: scale(0);
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    background-color: var(--white);
+    z-index: 1;
+    transition:  .2s linear;
+  }
+  
+  .grid .container .content .grid-container .box-6 button:hover::after {
+    transform: scale(30);
+    transition: transform .2s linear;
+  }
+  
+  .grid .container .content .grid-container .box-6 button span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .grid .container .content .grid-container .box-6 button:hover span {
+    color: var(--primary);
+    transition: .2s linear;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 450px) {
+    .grid .container .content .title {
+      padding: 20px 24px;
+    }
+  }
+  
+  @media (min-width: 610px) {
+    .grid .container .content .title {
+      width: 75%;
+    }
+  
+    .grid .container .content .title h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .grid .container .content .title {
+      width: 75%;
+    }
+  
+    .grid .container .content .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 16px;
+    }
+  
+    .grid .container .content .grid-container .box-6 button {
+      width: 75%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid .container .content .title {
+      width: 60%;
+    }
+  
+    .grid .container .content .title h1 {
+      font-size: 2.2rem;
+    }
+  
+    .grid .container .content .grid-container .box h1 {
+      font-size: 2.2rem;
+    }
+  
+    .grid .container .content .grid-container .box p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .grid .container .content .title {
+      width: 50%;
+    }
+  
+    .grid .container .content .title h1 {
+      font-size: 2.2rem;
+    }
+  
+    .grid .container .content .grid-container {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 32px;
+      height: 90vh;
+    }
+  
+    .grid .container .content .grid-container .box {
+      justify-content: end;
+      align-items: start;
+      padding: 2rem 1.5rem;
+      text-align: start;
+    }
+  
+    .grid .container .content .grid-container .box h1 {
+      font-size: 1.7rem;
+    }
+    
+    .grid .container .content .grid-container .box p {
+      font-size: .8rem;
+      width: 100%;
+    }
+  
+    .grid .container .content .grid-container .box-1 {
+      grid-row: span 4 / span 4;
+    }
+  
+    .grid .container .content .grid-container .box-2 {
+      position: relative;
+      grid-column: span 3 / span 3;
+      grid-row: span 3 / span 3;
+      overflow: hidden;
+    }
+  
+    .grid .container .content .grid-container .box-2 .light {
+      display: block;
+      align-self: center;
+      position: absolute;
+      top: 0;
+      height: 5%;
+      width: 50%;
+      filter: blur(80px);
+      background: var(--accent);
+      box-shadow: 0 0 2px var(--accent), 0 0 5px var(--accent), 0 0 10px var(--accent),
+        0 0 20px var(--accent);
+    }
+  
+    .grid .container .content .grid-container .box-2 p {
+      width: 60%;
+    }
+  
+    .grid .container .content .grid-container .box-2 .rope {
+      display: block;
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 50%;
+      height: 100%;
+      transform: rotate(-15deg);
+      opacity: 0.1;
+    }
+  
+    .grid .container .content .grid-container .box-2 .star {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 75%;
+      opacity: 0.1;
+    }
+  
+    .grid .container .content .grid-container .box-3 {
+      grid-row: span 3 / span 3;
+      grid-column-start: 5;
+    }
+    
+    .grid .container .content .grid-container .box-4 {
+      grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
+      grid-column-start: 2;
+      grid-row-start: 4;
+    }
+  
+    .grid .container .content .grid-container .box-5 {
+      grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
+      grid-column-start: 4;
+      grid-row-start: 4;
+    }
+  
+    .grid .container .content .grid-container .box-6 {
+      grid-row-start: 5;
+    }
+  
+    .grid .container .content .grid-container .box-6 button {
+      width: 100%;
+      border-radius: 32px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .grid .container .content .grid-container {
+      height: 80vh;
+    }
+  
+    .grid .container .content .grid-container .box h1 {
+      font-size: 2rem;
+    }
+    
+    .grid .container .content .grid-container .box p {
+      font-size: 1rem;
+    }
+  }

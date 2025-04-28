@@ -1,0 +1,328 @@
+/* Estilos para la sección hero */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(1, 1, 3, 1) 8%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  }
+  
+  .hero .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .hero .container .content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero .container .content .background-line {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .hero .container .content .background-line .line-1,
+  .hero .container .content .background-line .line-2,
+  .hero .container .content .background-line .line-3 {
+    position: relative;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--darkgray);
+  }
+  
+  .hero .container .content .background-line .line-1::after,
+  .hero .container .content .background-line .line-3::after {
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 1px;
+    background: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 5px var(--accent), 0 0 10px var(--accent),
+      0 0 20px var(--accent), 0 0 40px var(--accent);
+    animation: lineAnimationFromTop 20s linear infinite;
+  }
+  
+  .hero .container .content .background-line .line-2::after {
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 1px;
+    background: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary), 0 0 10px var(--primary),
+      0 0 20px var(--primary), 0 0 40px var(--primary);
+    animation: lineAnimationFromBottom 20s linear infinite;
+  }
+  
+  .hero .container .content .background-line .line-4 {
+    display: none;
+    position: relative;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--darkgray);
+  }
+  
+  .hero .container .content .background-line .line-4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 5%;
+    width: 1px;
+    background: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary), 0 0 10px var(--primary),
+      0 0 20px var(--primary), 0 0 40px var(--primary);
+    animation: lineAnimationFromBottom 20s linear infinite;
+  }
+  
+  .hero .container .content .background-line .line-5 {
+    display: none;
+    position: relative;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--darkgray);
+  }
+  
+  .hero .container .content .background-line .line-5::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    height: 5%;
+    width: 1px;
+    background: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 5px var(--accent), 0 0 10px var(--accent),
+      0 0 20px var(--accent), 0 0 40px var(--accent);
+    animation: lineAnimationFromTop 20s linear infinite;
+  }
+  
+  .hero .container .content .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .hero .container .content .main h2 {
+    font-size: 0.8rem;
+    font-family: var(--montserrat);
+    color: var(--lightgray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero .container .content .main h1 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0;
+  }
+  
+  .hero .container .content .main h1.highlight {
+    color: var(--primary);
+    font-size: 3.5rem;
+    margin-top: -10px;
+  }
+  
+  .hero .container .content .main p {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 1.5rem 0;
+  }
+  
+  .hero .container .content .main .hero-form {
+    width: 450px;
+    background: rgba(38, 38, 38, 0.4);
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--dark);
+    border-radius: 50px;
+    padding: 4px;
+    animation: inputShadow 1s linear forwards;
+    margin-top: 1rem;
+  }
+  
+  .hero .container .content .main .hero-form input {
+    width: 70%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    color: var(--white);
+    font-size: 1rem;
+  }
+  
+  .hero .container .content .main .hero-form input:focus,
+  .hero .container .content .main .hero-form button:focus {
+    outline: none;
+  }
+  
+  .hero .container .content .main .hero-form button {
+    cursor: pointer;
+    width: 30%;
+    padding: 12px 0;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .container .content .main .hero-form button:hover {
+    background-color: var(--secondary);
+  }
+  
+  .hero .container .content .light {
+    position: absolute;
+    bottom: 0;
+    height: 2%;
+    width: 40%;
+    filter: blur(80px);
+    background: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary), 0 0 10px var(--primary),
+      0 0 20px var(--primary), 0 0 40px var(--primary);
+    animation: fade-up-light 1s linear forwards;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 450px) {
+    .hero .container .content .background-line {
+      gap: 9rem;
+    }
+  
+    .hero .container .content .main p {
+      width: 65%;
+    }
+  }
+  
+  @media (min-width: 610px) {
+    .hero .container .content .background-line .line-4 {
+      display: block;
+    }
+  
+    .hero .container .content .main h2 {
+      font-size: 0.9rem;
+    }
+    
+    .hero .container .content .main h1,
+    .hero .container .content .main h1.highlight {
+      font-size: 3.8rem;
+    }
+  
+    .hero .container .content .main p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero .container .content .background-line {
+      gap: 11rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero .container .content .background-line {
+      gap: 12rem;
+    }
+  
+    .hero .container .content .background-line .line-5 {
+      display: block;
+    }
+  
+    .hero .container .content .main h2 {
+      font-size: 1rem;
+    }
+  
+    .hero .container .content .main p {
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+  
+    .hero .container .content .main h1,
+    .hero .container .content .main h1.highlight {
+      font-size: 4.5rem;
+    }
+  
+    .hero .container .content .main .hero-form {
+      width: 500px;
+      padding: 5px;
+    }
+  
+    .hero .container .content .main .hero-form input {
+      width: 70%;
+      font-size: 1rem;
+      padding: 16px 24px;
+    }
+  
+    .hero .container .content .main .hero-form button {
+      width: 30%;
+      padding: 16px 2px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .hero .container .content .background-line {
+      gap: 15rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .hero .container .content .background-line {
+      gap: 19rem;
+    }
+  
+    .hero .container .content .main h1,
+    .hero .container .content .main h1.highlight {
+      font-size: 5.5rem;
+    }
+  
+    .hero .container .content .main h2 {
+      font-size: 1.2rem;
+    }
+  
+    .hero .container .content .main p {
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+  
+    .hero .container .content .main .hero-form {
+      width: 550px;
+    }
+  
+    .hero .container .content .main .hero-form input {
+      font-size: 1.1rem;
+    }
+  
+    .hero .container .content .main .hero-form button {
+      font-size: 1.1rem;
+    }
+  }

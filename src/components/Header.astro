@@ -1,5 +1,8 @@
 ---
+// Importar estilos específicos para este componente
+import '../styles/components/header.css';
 ---
+
 <header data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
   <div class="container">
     <div class="content">
@@ -33,13 +36,13 @@
         </button>
 
         <button class="btn-menu" id="btn-menu">
-          <box-icon name="menu-alt-right" class="icon"></box-icon>
+          <i class="bx bx-menu-alt-right icon"></i>
         </button>
       </div>
 
       <div class="mobile-nav">
         <button class="close-mobile-nav">
-          <box-icon name="x" class="icon"></box-icon>
+          <i class="bx bx-x icon"></i>
         </button>
         <div class="nav">
           <a href="#about">¿Qué es?</a>
@@ -55,4 +58,4 @@
   </div>
 </header>
 
-<a href="#" class="to-top"><box-icon name="chevron-up"></box-icon></a>
+<a href="#" class="to-top"><i class="bx bx-chevron-up"></i></a>

@@ -13,27 +13,125 @@ import '../styles/components/header.css';
         class="logo"
       >
         <img src="/assets/logo.png" alt="logo" />
-        <a href=""><span class="logo-hark">HARK</span><span class="logo-ai">AI</span></a>
+        <a href="/"><span class="logo-hark">HARK</span><span class="logo-ai">AI</span></a>
       </div>
 
       <nav>
-        <a href="#about">¿Qué es?</a>
-        <a href="#features">Funciones</a>
-        <a href="#how">¿Cómo funciona?</a>
-        <a href="#tech">Tecnología</a>
-        <a href="#platforms">Plataformas</a>
-        <a href="#contact">Contacto</a>
+        <a href="/">Home</a>
+        
+        <!-- Megamenú Soluciones -->
+        <div class="megamenu-container">
+          <a href="#" class="megamenu-trigger">Soluciones <i class="bx bx-chevron-down"></i></a>
+          <div class="megamenu">
+            <div class="megamenu-grid">
+              <!-- Columna: EPPs -->
+              <div class="megamenu-column">
+                <h3>EPPs</h3>
+                <ul>
+                  <li><a href="/soluciones/trabajo-en-altura">Trabajo en altura</a></li>
+                  <li><a href="/soluciones/uso-de-celulares">Uso de Celulares</a></li>
+                  <li><a href="/soluciones/rendimiento-laboral">Rendimiento Laboral</a></li>
+                  <li><a href="/soluciones/ergonomia-laboral">Ergonomía Laboral</a></li>
+                  <li><a href="/soluciones/residencias-inteligentes">Residencias Inteligentes</a></li>
+                  <li><a href="/soluciones/delincuencia-urbana">Delincuencia Urbana</a></li>
+                  <li><a href="/soluciones/verificacion-vehicular">Verificación Vehicular</a></li>
+                  <li><a href="/soluciones/deteccion-de-marcaje">Detección de Marcaje</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Megamenú Industrias -->
+        <div class="megamenu-container">
+          <a href="#" class="megamenu-trigger">Industrias <i class="bx bx-chevron-down"></i></a>
+          <div class="megamenu">
+            <div class="megamenu-grid">
+              <!-- Columna de Industrias -->
+              <div class="megamenu-column">
+                <h3>Sectores</h3>
+                <ul>
+                  <li><a href="/industrias/manufactura">Manufactura</a></li>
+                  <li><a href="/industrias/alimentaria">Alimentaria</a></li>
+                  <li><a href="/industrias/construccion">Construcción</a></li>
+                  <li><a href="/industrias/mineria">Minería</a></li>
+                  <li><a href="/industrias/pesquero">Pesquero</a></li>
+                  <li><a href="/industrias/transporte">Transporte</a></li>
+                </ul>
+              </div>
+              
+              <!-- Columna de Seguridad -->
+              <div class="megamenu-column">
+                <h3>Seguridad</h3>
+                <ul>
+                  <li><a href="/industrias/seguridad-ciudadana">Seguridad Ciudadana</a></li>
+                  <li><a href="/industrias/seguridad-residencial">Seguridad Residencial</a></li>
+                  <li><a href="/industrias/seguridad-urbana">Seguridad Urbana</a></li>
+                  <li><a href="/industrias/empresarial">Empresarial</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Megamenú Recursos -->
+        <div class="megamenu-container">
+          <a href="#" class="megamenu-trigger">Recursos <i class="bx bx-chevron-down"></i></a>
+          <div class="megamenu">
+            <div class="megamenu-grid">
+              <!-- Columna de Plataformas -->
+              <div class="megamenu-column">
+                <h3>Plataformas</h3>
+                <ul>
+                  <li><a href="/recursos/web-app">Web App</a></li>
+                  <li><a href="/recursos/mobile-app">Mobile App</a></li>
+                  <li><a href="/recursos/integraciones">Integraciones</a></li>
+                </ul>
+              </div>
+              
+              <!-- Columna de Información -->
+              <div class="megamenu-column">
+                <h3>Información</h3>
+                <ul>
+                  <li><a href="/recursos/privacidad-seguridad">Privacidad y Seguridad</a></li>
+                  <li><a href="/recursos/noticias">Noticias</a></li>
+                  <li><a href="/recursos/guias-de-usuario">Guías de Usuario</a></li>
+                  <li><a href="/recursos/trabaja-con-nosotros">Trabaja con nosotros</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Megamenú Compañía -->
+        <div class="megamenu-container">
+          <a href="#" class="megamenu-trigger">Compañía <i class="bx bx-chevron-down"></i></a>
+          <div class="megamenu">
+            <div class="megamenu-grid">
+              <!-- Columna de Compañía -->
+              <div class="megamenu-column">
+                <h3>Nosotros</h3>
+                <ul>
+                  <li><a href="/compania/sobre-nosotros">Sobre nosotros</a></li>
+                  <li><a href="/compania/por-que-harkai">¿Por qué HARKAI?</a></li>
+                  <li><a href="/compania/contactanos">Contáctanos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <div class="extra-nav">
-        <button
+        <a 
+          href="/demo"
           data-aos="fade-down-left"
           data-aos-duration="1000"
           data-aos-delay="400"
           class="demo-button"
         >
-          DEMOSTRACIÓN
-        </button>
+          SOLICITAR DEMO
+        </a>
 
         <button class="btn-menu" id="btn-menu">
           <i class="bx bx-menu-alt-right icon"></i>
@@ -45,13 +143,84 @@ import '../styles/components/header.css';
           <i class="bx bx-x icon"></i>
         </button>
         <div class="nav">
-          <a href="#about">¿Qué es?</a>
-          <a href="#features">Funciones</a>
-          <a href="#how">¿Cómo funciona?</a>
-          <a href="#tech">Tecnología</a>
-          <a href="#platforms">Plataformas</a>
-          <a href="#contact">Contacto</a>
-          <button>Demostración</button>
+          <a href="/">Home</a>
+          
+          <!-- Acordeón Soluciones -->
+          <div class="mobile-accordion">
+            <div class="mobile-accordion-header">
+              <span>Soluciones</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <div class="mobile-accordion-content">
+              <h4>EPPs</h4>
+              <a href="/soluciones/trabajo-en-altura">Trabajo en altura</a>
+              <a href="/soluciones/uso-de-celulares">Uso de Celulares</a>
+              <a href="/soluciones/rendimiento-laboral">Rendimiento Laboral</a>
+              <a href="/soluciones/ergonomia-laboral">Ergonomía Laboral</a>
+              <a href="/soluciones/residencias-inteligentes">Residencias Inteligentes</a>
+              <a href="/soluciones/delincuencia-urbana">Delincuencia Urbana</a>
+              <a href="/soluciones/verificacion-vehicular">Verificación Vehicular</a>
+              <a href="/soluciones/deteccion-de-marcaje">Detección de Marcaje</a>
+            </div>
+          </div>
+          
+          <!-- Acordeón Industrias -->
+          <div class="mobile-accordion">
+            <div class="mobile-accordion-header">
+              <span>Industrias</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <div class="mobile-accordion-content">
+              <h4>Sectores</h4>
+              <a href="/industrias/manufactura">Manufactura</a>
+              <a href="/industrias/alimentaria">Alimentaria</a>
+              <a href="/industrias/construccion">Construcción</a>
+              <a href="/industrias/mineria">Minería</a>
+              <a href="/industrias/pesquero">Pesquero</a>
+              <a href="/industrias/transporte">Transporte</a>
+              
+              <h4>Seguridad</h4>
+              <a href="/industrias/seguridad-ciudadana">Seguridad Ciudadana</a>
+              <a href="/industrias/seguridad-residencial">Seguridad Residencial</a>
+              <a href="/industrias/seguridad-urbana">Seguridad Urbana</a>
+              <a href="/industrias/empresarial">Empresarial</a>
+            </div>
+          </div>
+          
+          <!-- Acordeón Recursos -->
+          <div class="mobile-accordion">
+            <div class="mobile-accordion-header">
+              <span>Recursos</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <div class="mobile-accordion-content">
+              <h4>Plataformas</h4>
+              <a href="/recursos/web-app">Web App</a>
+              <a href="/recursos/mobile-app">Mobile App</a>
+              <a href="/recursos/integraciones">Integraciones</a>
+              
+              <h4>Información</h4>
+              <a href="/recursos/privacidad-seguridad">Privacidad y Seguridad</a>
+              <a href="/recursos/noticias">Noticias</a>
+              <a href="/recursos/guias-de-usuario">Guías de Usuario</a>
+              <a href="/recursos/trabaja-con-nosotros">Trabaja con nosotros</a>
+            </div>
+          </div>
+          
+          <!-- Acordeón Compañía -->
+          <div class="mobile-accordion">
+            <div class="mobile-accordion-header">
+              <span>Compañía</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <div class="mobile-accordion-content">
+              <a href="/compania/sobre-nosotros">Sobre nosotros</a>
+              <a href="/compania/por-que-harkai">¿Por qué HARKAI?</a>
+              <a href="/compania/contactanos">Contáctanos</a>
+            </div>
+          </div>
+          
+          <a href="/demo" class="mobile-demo-btn">SOLICITAR DEMO</a>
         </div>
       </div>
     </div>
@@ -59,3 +228,133 @@ import '../styles/components/header.css';
 </header>
 
 <a href="#" class="to-top"><i class="bx bx-chevron-up"></i></a>
+
+<script>
+  // Este es un script que se ejecutará en el cliente
+  document.addEventListener('DOMContentLoaded', function() {
+    // Menú móvil: apertura y cierre
+    const btnMenu = document.getElementById('btn-menu');
+    const closeBtn = document.querySelector('.close-mobile-nav');
+    const mobileNav = document.querySelector('.mobile-nav') as HTMLElement | null;
+    
+    if (btnMenu && closeBtn && mobileNav) {
+      btnMenu.addEventListener('click', () => {
+        mobileNav.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevenir scroll
+      });
+      
+      closeBtn.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = ''; // Restaurar scroll
+      });
+    }
+    
+    // Variables para controlar los estados del menú
+    let activeMenu: HTMLElement | null = null;
+    
+    // Manejo de megamenús en desktop
+    const megamenuContainers = document.querySelectorAll<HTMLElement>('.megamenu-container');
+    
+    megamenuContainers.forEach(container => {
+      const trigger = container.querySelector<HTMLElement>('.megamenu-trigger');
+      const megamenu = container.querySelector<HTMLElement>('.megamenu');
+      
+      if (trigger && megamenu) {
+        // Variable para controlar el estado del menú
+        let isMenuActive = false;
+        
+        // Abrir el menú
+        const openMenu = () => {
+          // Si hay otro menú activo, cerrarlo
+          if (activeMenu && activeMenu !== megamenu) {
+            activeMenu.classList.remove('active');
+          }
+          
+          // Activar este menú
+          megamenu.classList.add('active');
+          activeMenu = megamenu;
+          isMenuActive = true;
+        };
+        
+        // Posible cierre del menú
+        const possiblyCloseMenu = () => {
+          isMenuActive = false;
+          
+          // Pequeño retraso para permitir que el mouse se mueva entre elementos
+          setTimeout(() => {
+            if (!isMenuActive && activeMenu === megamenu) {
+              megamenu.classList.remove('active');
+              activeMenu = null;
+            }
+          }, 100);
+        };
+        
+        // Eventos de ratón
+        trigger.addEventListener('mouseenter', openMenu);
+        trigger.addEventListener('mouseleave', possiblyCloseMenu);
+        megamenu.addEventListener('mouseenter', () => { isMenuActive = true; });
+        megamenu.addEventListener('mouseleave', possiblyCloseMenu);
+        
+        // Evento de clic para dispositivos táctiles
+        trigger.addEventListener('click', (e: Event) => {
+          e.preventDefault();
+          
+          const isActive = megamenu.classList.contains('active');
+          
+          // Cerrar todos los menús
+          document.querySelectorAll<HTMLElement>('.megamenu').forEach(menu => {
+            menu.classList.remove('active');
+          });
+          
+          // Si no estaba activo, abrirlo
+          if (!isActive) {
+            megamenu.classList.add('active');
+            activeMenu = megamenu;
+          } else {
+            activeMenu = null;
+          }
+        });
+      }
+    });
+    
+    // Cerrar menús al hacer clic fuera
+    document.addEventListener('click', (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      
+      if (!target.closest('.megamenu') && !target.closest('.megamenu-trigger') && activeMenu) {
+        activeMenu.classList.remove('active');
+        activeMenu = null;
+      }
+    });
+    
+    // Acordeones en menú móvil
+    const accordions = document.querySelectorAll<HTMLElement>('.mobile-accordion');
+    
+    accordions.forEach(accordion => {
+      const header = accordion.querySelector<HTMLElement>('.mobile-accordion-header');
+      const content = accordion.querySelector<HTMLElement>('.mobile-accordion-content');
+      const icon = header?.querySelector<HTMLElement>('i');
+      
+      if (header && content && icon) {
+        header.addEventListener('click', () => {
+          // Cerrar otros acordeones
+          accordions.forEach(acc => {
+            if (acc !== accordion) {
+              const accContent = acc.querySelector<HTMLElement>('.mobile-accordion-content');
+              const accIcon = acc.querySelector<HTMLElement>('.mobile-accordion-header i');
+              
+              if (accContent && accIcon) {
+                accContent.classList.remove('active');
+                accIcon.classList.remove('rotate');
+              }
+            }
+          });
+          
+          // Abrir/cerrar este acordeón
+          content.classList.toggle('active');
+          icon.classList.toggle('rotate');
+        });
+      }
+    });
+  });
+</script>

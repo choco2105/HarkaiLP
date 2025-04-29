@@ -12,5 +12,9 @@
     "aos": "^2.3.4",
     "astro": "^5.7.5",
     "boxicons": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
   }
 }

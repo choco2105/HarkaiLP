@@ -1,0 +1,261 @@
+---
+// Importar el layout principal
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// Importar componentes
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Importar estilos específicos para esta página
+import '../../styles/pages/sobre-nosotros.css';
+---
+
+<MainLayout title="Sobre Nosotros | HARKAI - Seguridad Laboral con IA">
+  <Header />
+  
+  <main class="sobre-nosotros">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="fade-up" data-aos-duration="1000">
+            Sobre Nosotros
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Conoce más sobre HARKAI y nuestro compromiso con la seguridad industrial
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestra Historia Section -->
+    <section class="historia">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Nuestra Historia</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="historia-grid">
+            <div class="text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+              <p>
+                HARKAI nace de la unión de dos visiones complementarias: la experiencia en seguridad industrial y el poder transformador de la inteligencia artificial. Fundada en 2023 como una alianza estratégica con Consultoría Carranza, una empresa líder en consultoría de seguridad industrial, HARKAI surge con el propósito de revolucionar la manera en que las empresas gestionan la seguridad de sus trabajadores.
+              </p>
+              <p>
+                Lo que comenzó como un proyecto para detectar el uso correcto de EPPs (Equipos de Protección Personal) en entornos industriales, ha evolucionado hasta convertirse en una plataforma integral de supervisión que combina hardware especializado, software inteligente y algoritmos de aprendizaje automático para crear entornos laborales más seguros.
+              </p>
+              <p>
+                Nuestro sistema fue desarrollado y perfeccionado a través de numerosas pruebas en entornos industriales reales, colaborando estrechamente con empresas de diversos sectores para garantizar que nuestra tecnología no solo fuera efectiva sino también adaptable a las diferentes necesidades y desafíos de cada industria.
+              </p>
+            </div>
+            <div class="image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+              <img src="/assets/about/historia.jpg" alt="Historia de HARKAI" />
+              <div class="box-light"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Misión y Visión Section -->
+    <section class="mision-vision">
+      <div class="container">
+        <div class="content">
+          <div class="box mision" data-aos="fade-right" data-aos-duration="1000">
+            <div class="box-light"></div>
+            <h2>Nuestra Misión</h2>
+            <p>
+              Transformar la seguridad industrial a través de la inteligencia artificial, creando entornos laborales donde la protección del trabajador sea proactiva, inteligente y eficiente, reduciendo significativamente los riesgos laborales y promoviendo una cultura de seguridad preventiva.
+            </p>
+          </div>
+
+          <div class="box vision" data-aos="fade-left" data-aos-duration="1000">
+            <div class="box-light"></div>
+            <h2>Nuestra Visión</h2>
+            <p>
+              Ser reconocidos globalmente como líderes e innovadores en soluciones de seguridad industrial basadas en IA, estableciendo un nuevo estándar donde la tecnología y la seguridad laboral se integren perfectamente para proteger lo más valioso: la vida y bienestar de las personas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores Section -->
+    <section class="valores">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Nuestros Valores</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="valores-grid">
+            <div class="valor" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <div class="icon">
+                <i class="bx bx-shield-quarter"></i>
+              </div>
+              <h3>Seguridad</h3>
+              <p>Priorizamos la seguridad en todo lo que hacemos, tanto en nuestras soluciones como en nuestra forma de trabajo.</p>
+            </div>
+            
+            <div class="valor" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="icon">
+                <i class="bx bx-bulb"></i>
+              </div>
+              <h3>Innovación</h3>
+              <p>Buscamos constantemente nuevas formas de mejorar nuestras soluciones y adaptarnos a los desafíos cambiantes.</p>
+            </div>
+            
+            <div class="valor" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="icon">
+                <i class="bx bx-check-shield"></i>
+              </div>
+              <h3>Confiabilidad</h3>
+              <p>Desarrollamos tecnología en la que nuestros clientes pueden confiar, con sistemas robustos y precisos.</p>
+            </div>
+            
+            <div class="valor" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="icon">
+                <i class="bx bx-user-voice"></i>
+              </div>
+              <h3>Empatía</h3>
+              <p>Entendemos las necesidades reales de las personas y las empresas, para desarrollar soluciones que realmente importen.</p>
+            </div>
+            
+            <div class="valor" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+              <div class="icon">
+                <i class="bx bx-group"></i>
+              </div>
+              <h3>Colaboración</h3>
+              <p>Creemos en el poder del trabajo en equipo, tanto internamente como con nuestros clientes y socios estratégicos.</p>
+            </div>
+            
+            <div class="valor" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <div class="icon">
+                <i class="bx bx-line-chart"></i>
+              </div>
+              <h3>Excelencia</h3>
+              <p>Nos esforzamos por alcanzar los más altos estándares en cada aspecto de nuestro trabajo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section class="equipo">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Nuestro Equipo</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <p class="subtitle" data-aos="fade-up" data-aos-duration="1000">
+            En HARKAI, contamos con un equipo multidisciplinario de profesionales apasionados por la seguridad industrial y la inteligencia artificial.
+          </p>
+
+          <div class="equipo-grid">
+            <div class="miembro" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <div class="foto">
+                <img src="/assets/about/team-1.jpg" alt="Nombre del Miembro del Equipo" />
+              </div>
+              <h3>Carlos Mendoza</h3>
+              <p class="cargo">CEO & Co-Fundador</p>
+              <p class="descripcion">Ingeniero industrial con más de 15 años de experiencia en seguridad laboral y gestión de riesgos.</p>
+            </div>
+            
+            <div class="miembro" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="foto">
+                <img src="/assets/about/team-2.jpg" alt="Nombre del Miembro del Equipo" />
+              </div>
+              <h3>María Fernández</h3>
+              <p class="cargo">CTO & Co-Fundadora</p>
+              <p class="descripcion">Ingeniera en sistemas con especialización en inteligencia artificial y aprendizaje automático.</p>
+            </div>
+            
+            <div class="miembro" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="foto">
+                <img src="/assets/about/team-3.jpg" alt="Nombre del Miembro del Equipo" />
+              </div>
+              <h3>Jorge Ramírez</h3>
+              <p class="cargo">Director de Operaciones</p>
+              <p class="descripcion">Experto en implementación de sistemas de seguridad y optimización de procesos industriales.</p>
+            </div>
+            
+            <div class="miembro" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="foto">
+                <img src="/assets/about/team-4.jpg" alt="Nombre del Miembro del Equipo" />
+              </div>
+              <h3>Laura Torres</h3>
+              <p class="cargo">Directora de Desarrollo</p>
+              <p class="descripcion">Especialista en desarrollo de software con enfoque en interfaces intuitivas y experiencia de usuario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alianzas Section -->
+    <section class="alianzas">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Nuestras Alianzas Estratégicas</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="alianza principal" data-aos="fade-up" data-aos-duration="1000">
+            <div class="logo">
+              <img src="/assets/about/carranza-logo.png" alt="Consultoría Carranza" />
+            </div>
+            <div class="info">
+              <h3>Consultoría Carranza</h3>
+              <p>
+                Nuestra principal alianza estratégica es con Consultoría Carranza, empresa líder en consultoría de seguridad industrial con más de 20 años de experiencia en el mercado. Esta colaboración nos permite combinar la experiencia práctica en seguridad industrial con nuestra tecnología de vanguardia para ofrecer soluciones completas a nuestros clientes.
+              </p>
+            </div>
+          </div>
+
+          <div class="otras-alianzas" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="alianza">
+              <img src="/assets/about/partner-1.png" alt="Socio Estratégico" />
+            </div>
+            <div class="alianza">
+              <img src="/assets/about/partner-2.png" alt="Socio Estratégico" />
+            </div>
+            <div class="alianza">
+              <img src="/assets/about/partner-3.png" alt="Socio Estratégico" />
+            </div>
+            <div class="alianza">
+              <img src="/assets/about/partner-4.png" alt="Socio Estratégico" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="content">
+          <div class="cta-box" data-aos="fade-up" data-aos-duration="1000">
+            <h2>¿Listo para transformar la seguridad en tu empresa?</h2>
+            <p>Contacta con nuestro equipo y descubre cómo HARKAI puede ayudarte a crear un entorno laboral más seguro y eficiente.</p>
+            <div class="buttons">
+              <a href="/compania/contactanos" class="btn primary">Contáctanos</a>
+              <a href="/demo" class="btn secondary">Solicitar Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</MainLayout>

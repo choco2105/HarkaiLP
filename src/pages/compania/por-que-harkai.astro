@@ -1,0 +1,534 @@
+---
+// Importar el layout principal
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// Importar componentes
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Importar estilos específicos para esta página
+import '../../styles/pages/por-que-harkai.css';
+---
+
+<MainLayout title="¿Por qué HARKAI? | Seguridad Laboral con IA">
+  <Header />
+  
+  <main class="por-que-harkai">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="fade-up" data-aos-duration="1000">
+            ¿Por qué elegir <span>HARKAI</span>?
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Descubre las ventajas y beneficios que nos diferencian en el mercado de la seguridad industrial
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ventajas Section -->
+    <section class="ventajas">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Ventajas Competitivas</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="ventajas-grid">
+            <div class="ventaja" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <div class="icon">
+                <i class="bx bx-chip"></i>
+              </div>
+              <h3>Inteligencia Artificial Avanzada</h3>
+              <p>
+                Nuestro sistema utiliza algoritmos de aprendizaje profundo entrenados con más de 10,000 imágenes para garantizar una detección precisa en diversos entornos y condiciones.
+              </p>
+            </div>
+
+            <div class="ventaja" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="icon">
+                <i class="bx bx-timer"></i>
+              </div>
+              <h3>Detección en Tiempo Real</h3>
+              <p>
+                Identificamos situaciones de riesgo al instante, permitiendo correcciones inmediatas y previniendo accidentes antes de que ocurran.
+              </p>
+            </div>
+
+            <div class="ventaja" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="icon">
+                <i class="bx bx-analyse"></i>
+              </div>
+              <h3>Análisis Detallado y Reportes</h3>
+              <p>
+                Generamos informes completos y estadísticas que ayudan a identificar patrones y áreas de mejora en la seguridad de tu empresa.
+              </p>
+            </div>
+
+            <div class="ventaja" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="icon">
+                <i class="bx bx-line-chart"></i>
+              </div>
+              <h3>Mejora Continua</h3>
+              <p>
+                Nuestro sistema aprende y mejora constantemente, adaptándose a las necesidades específicas de tu industria y entorno laboral.
+              </p>
+            </div>
+
+            <div class="ventaja" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+              <div class="icon">
+                <i class="bx bx-plug"></i>
+              </div>
+              <h3>Fácil Integración</h3>
+              <p>
+                HARKAI se integra sin complicaciones con los sistemas existentes en tu empresa, minimizando el tiempo de implementación.
+              </p>
+            </div>
+
+            <div class="ventaja" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <div class="icon">
+                <i class="bx bx-customize"></i>
+              </div>
+              <h3>Soluciones Personalizadas</h3>
+              <p>
+                Adaptamos nuestro sistema a las necesidades específicas de cada cliente, ofreciendo soluciones a medida para diferentes industrias y desafíos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="beneficios">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Beneficios para tu Empresa</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="beneficios-tabs" data-aos="fade-up" data-aos-duration="1000">
+            <div class="tabs-navigation">
+              <button class="tab-btn active" data-tab="seguridad">Seguridad</button>
+              <button class="tab-btn" data-tab="productividad">Productividad</button>
+              <button class="tab-btn" data-tab="costos">Reducción de Costos</button>
+              <button class="tab-btn" data-tab="cumplimiento">Cumplimiento Normativo</button>
+            </div>
+
+            <div class="tabs-content">
+              <div class="tab-panel active" id="seguridad">
+                <div class="panel-content">
+                  <div class="panel-image">
+                    <img src="/assets/why/seguridad.jpg" alt="Seguridad laboral mejorada" />
+                  </div>
+                  <div class="panel-text">
+                    <h3>Mayor Seguridad Laboral</h3>
+                    <p>
+                      HARKAI reduce significativamente el riesgo de accidentes laborales al garantizar el uso correcto de EPPs y detectar comportamientos inseguros antes de que causen incidentes.
+                    </p>
+                    <ul>
+                      <li>Disminución de hasta un 70% en incidentes por uso incorrecto de EPPs</li>
+                      <li>Detección temprana de situaciones de riesgo</li>
+                      <li>Creación de una cultura de seguridad proactiva</li>
+                      <li>Protección integral para los trabajadores</li>
+                      <li>Entorno laboral más seguro y controlado</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel" id="productividad">
+                <div class="panel-content">
+                  <div class="panel-image">
+                    <img src="/assets/why/productividad.jpg" alt="Aumento de productividad" />
+                  </div>
+                  <div class="panel-text">
+                    <h3>Aumento de Productividad</h3>
+                    <p>
+                      Al prevenir accidentes y optimizar los procesos de seguridad, HARKAI contribuye directamente a mejorar la productividad de tu empresa.
+                    </p>
+                    <ul>
+                      <li>Reducción de paradas por incidentes de seguridad</li>
+                      <li>Optimización de los tiempos de supervisión</li>
+                      <li>Menos interrupciones en los procesos productivos</li>
+                      <li>Mayor eficiencia en la gestión de seguridad</li>
+                      <li>Trabajadores más seguros son más productivos</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel" id="costos">
+                <div class="panel-content">
+                  <div class="panel-image">
+                    <img src="/assets/why/costos.jpg" alt="Reducción de costos" />
+                  </div>
+                  <div class="panel-text">
+                    <h3>Reducción de Costos Operativos</h3>
+                    <p>
+                      La prevención de accidentes y la automatización de la supervisión de seguridad se traducen en un importante ahorro económico para tu empresa.
+                    </p>
+                    <ul>
+                      <li>Disminución de costos asociados a accidentes laborales</li>
+                      <li>Reducción en primas de seguros</li>
+                      <li>Menos tiempo y recursos dedicados a la supervisión manual</li>
+                      <li>Optimización del uso y durabilidad de EPPs</li>
+                      <li>ROI demostrable en el corto y mediano plazo</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel" id="cumplimiento">
+                <div class="panel-content">
+                  <div class="panel-image">
+                    <img src="/assets/why/cumplimiento.jpg" alt="Cumplimiento normativo" />
+                  </div>
+                  <div class="panel-text">
+                    <h3>Cumplimiento Normativo Garantizado</h3>
+                    <p>
+                      HARKAI te ayuda a cumplir con las regulaciones de seguridad laboral vigentes, evitando sanciones y garantizando un entorno laboral conforme a la ley.
+                    </p>
+                    <ul>
+                      <li>Documentación automática de cumplimiento</li>
+                      <li>Evidencia visual para auditorías de seguridad</li>
+                      <li>Adaptación a normas específicas de cada industria</li>
+                      <li>Reportes personalizados para entidades reguladoras</li>
+                      <li>Actualización constante según cambios normativos</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Casos de Éxito Section -->
+    <section class="casos-exito">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Casos de Éxito</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="casos-slider" data-aos="fade-up" data-aos-duration="1000">
+            <div class="caso">
+              <div class="caso-content">
+                <div class="logo-cliente">
+                  <img src="/assets/why/logo-cliente1.png" alt="Logo del cliente" />
+                </div>
+                <blockquote>
+                  <p>
+                    "Desde que implementamos HARKAI en nuestras plantas, hemos reducido los incidentes por uso incorrecto de EPPs en un 82%. La facilidad de uso y la precisión del sistema han superado nuestras expectativas."
+                  </p>
+                  <cite>
+                    <strong>Juan Pérez</strong><br>
+                    Director de Seguridad Industrial, Minera del Norte
+                  </cite>
+                </blockquote>
+                <div class="resultados">
+                  <div class="resultado">
+                    <h4>82%</h4>
+                    <p>Reducción de incidentes</p>
+                  </div>
+                  <div class="resultado">
+                    <h4>35%</h4>
+                    <p>Ahorro en costos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="caso">
+              <div class="caso-content">
+                <div class="logo-cliente">
+                  <img src="/assets/why/logo-cliente2.png" alt="Logo del cliente" />
+                </div>
+                <blockquote>
+                  <p>
+                    "La implementación de HARKAI nos ha permitido crear una cultura de seguridad proactiva. El sistema no solo detecta problemas, sino que ha educado a nuestro personal sobre la importancia del uso correcto de EPPs."
+                  </p>
+                  <cite>
+                    <strong>María González</strong><br>
+                    Gerente de Operaciones, Construcciones ABC
+                  </cite>
+                </blockquote>
+                <div class="resultados">
+                  <div class="resultado">
+                    <h4>90%</h4>
+                    <p>Cumplimiento de normas</p>
+                  </div>
+                  <div class="resultado">
+                    <h4>45%</h4>
+                    <p>Menos tiempo de supervisión</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="caso">
+              <div class="caso-content">
+                <div class="logo-cliente">
+                  <img src="/assets/why/logo-cliente3.png" alt="Logo del cliente" />
+                </div>
+                <blockquote>
+                  <p>
+                    "Como empresa manufacturera, la seguridad es nuestra prioridad. HARKAI nos ha ayudado a monitorear eficientemente el uso de EPPs en nuestras líneas de producción, incrementando la eficiencia sin comprometer la seguridad."
+                  </p>
+                  <cite>
+                    <strong>Roberto Silva</strong><br>
+                    CEO, Industrias Modernas S.A.
+                  </cite>
+                </blockquote>
+                <div class="resultados">
+                  <div class="resultado">
+                    <h4>65%</h4>
+                    <p>Aumento en productividad</p>
+                  </div>
+                  <div class="resultado">
+                    <h4>28%</h4>
+                    <p>Reducción de accidentes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnología Section -->
+    <section class="tecnologia">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Tecnología de Vanguardia</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="tech-grid">
+            <div class="tech-image" data-aos="fade-right" data-aos-duration="1000">
+              <img src="/assets/why/tech-image.jpg" alt="Tecnología HARKAI" />
+              <div class="tech-overlay"></div>
+            </div>
+            
+            <div class="tech-features" data-aos="fade-left" data-aos-duration="1000">
+              <div class="tech-feature">
+                <div class="feature-icon">
+                  <i class="bx bx-camera"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Cámaras Inteligentes</h3>
+                  <p>Hardware especializado de grado industrial para entornos exigentes</p>
+                </div>
+              </div>
+              
+              <div class="tech-feature">
+                <div class="feature-icon">
+                  <i class="bx bx-brain"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Redes Neuronales</h3>
+                  <p>Algoritmos de aprendizaje profundo entrenados con más de 10,000 imágenes</p>
+                </div>
+              </div>
+              
+              <div class="tech-feature">
+                <div class="feature-icon">
+                  <i class="bx bx-cloud"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Procesamiento en la Nube</h3>
+                  <p>Escalabilidad y actualizaciones constantes sin interrupciones</p>
+                </div>
+              </div>
+              
+              <div class="tech-feature">
+                <div class="feature-icon">
+                  <i class="bx bx-mobile-alt"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Apps Multiplataforma</h3>
+                  <p>Acceso y control desde cualquier dispositivo, en cualquier momento</p>
+                </div>
+              </div>
+              
+              <div class="tech-feature">
+                <div class="feature-icon">
+                  <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Seguridad Avanzada</h3>
+                  <p>Protección de datos y privacidad con encriptación de nivel empresarial</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparativa Section -->
+    <section class="comparativa">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>HARKAI vs. Métodos Tradicionales</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="tabla-comparativa" data-aos="fade-up" data-aos-duration="1000">
+            <table>
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>Métodos Tradicionales</th>
+                  <th>HARKAI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monitoreo</td>
+                  <td>Manual, intermitente</td>
+                  <td>Automático, continuo 24/7</td>
+                </tr>
+                <tr>
+                  <td>Detección de riesgos</td>
+                  <td>Reactiva, después del incidente</td>
+                  <td>Proactiva, prevención en tiempo real</td>
+                </tr>
+                <tr>
+                  <td>Generación de informes</td>
+                  <td>Manual, propenso a errores</td>
+                  <td>Automático, preciso y detallado</td>
+                </tr>
+                <tr>
+                  <td>Escalabilidad</td>
+                  <td>Limitada por recursos humanos</td>
+                  <td>Altamente escalable</td>
+                </tr>
+                <tr>
+                  <td>Análisis de datos</td>
+                  <td>Básico, retrospectivo</td>
+                  <td>Avanzado, predictivo</td>
+                </tr>
+                <tr>
+                  <td>Costo operativo</td>
+                  <td>Alto y creciente</td>
+                  <td>Inversión inicial con ROI rápido</td>
+                </tr>
+                <tr>
+                  <td>Adaptabilidad</td>
+                  <td>Baja, procesos rígidos</td>
+                  <td>Alta, mejora continua con IA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="content">
+          <div class="cta-box" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Transforma la seguridad en tu empresa con HARKAI</h2>
+            <p>Da el primer paso hacia un entorno laboral más seguro, eficiente y tecnológicamente avanzado. Nuestro equipo está listo para mostrarte cómo HARKAI puede adaptarse a tus necesidades específicas.</p>
+            <div class="buttons">
+              <a href="/demo" class="btn primary">Solicitar Demo</a>
+              <a href="/compania/contactanos" class="btn secondary">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</MainLayout>
+
+<script>
+  // Tabs functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.tab-btn');
+    const tabPanels: NodeListOf<HTMLElement> = document.querySelectorAll('.tab-panel');
+    
+    tabButtons.forEach((button: HTMLButtonElement) => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and panels
+        tabButtons.forEach((btn: HTMLButtonElement) => btn.classList.remove('active'));
+        tabPanels.forEach((panel: HTMLElement) => panel.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Show corresponding panel
+        const tabId: string | null = button.getAttribute('data-tab');
+        if (tabId) {
+          const panel: HTMLElement | null = document.getElementById(tabId);
+          if (panel) {
+            panel.classList.add('active');
+          }
+        }
+      });
+    });
+    
+    // Simple testimonial slider functionality
+    const dots: NodeListOf<HTMLElement> = document.querySelectorAll('.pagination .dot');
+    const casos: NodeListOf<HTMLElement> = document.querySelectorAll('.caso');
+    let currentSlide: number = 0;
+    
+    function showSlide(index: number): void {
+      // Hide all slides
+      casos.forEach((caso: HTMLElement) => {
+        caso.style.display = 'none';
+      });
+      
+      // Remove active class from all dots
+      dots.forEach((dot: HTMLElement) => {
+        dot.classList.remove('active');
+      });
+      
+      // Show current slide and activate dot
+      casos[index].style.display = 'block';
+      dots[index].classList.add('active');
+    }
+    
+    // Initialize slider
+    showSlide(currentSlide);
+    
+    // Add click event to dots
+    dots.forEach((dot: HTMLElement, index: number) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        currentSlide = index;
+      });
+    });
+    
+    // Auto-rotate slides every 5 seconds
+    setInterval((): void => {
+      currentSlide = (currentSlide + 1) % casos.length;
+      showSlide(currentSlide);
+    }, 5000);
+  });
+</script>

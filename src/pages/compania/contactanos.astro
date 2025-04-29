@@ -1,0 +1,364 @@
+---
+// Importar el layout principal
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// Importar componentes
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Importar estilos específicos para esta página
+import '../../styles/pages/contactanos.css';
+---
+
+<MainLayout title="Contáctanos | HARKAI - Seguridad Laboral con IA">
+  <Header />
+  
+  <main class="contactanos">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="fade-up" data-aos-duration="1000">
+            Contáctanos
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Estamos aquí para responder tus preguntas y mostrarte cómo HARKAI puede transformar la seguridad en tu empresa
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="content">
+          <div class="contact-grid" data-aos="fade-up" data-aos-duration="1000">
+            <div class="form-container">
+              <h2>Envíanos un mensaje</h2>
+              <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+              
+              <form class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="company">Nombre de la Compañía*</label>
+                    <input type="text" id="company" placeholder="Nombre de tu empresa" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Nombre completo*</label>
+                    <input type="text" id="name" placeholder="Tu nombre completo" required>
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="position">Posición en la Compañía</label>
+                    <input type="text" id="position" placeholder="Tu cargo o posición">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Número telefónico*</label>
+                    <input type="tel" id="phone" placeholder="+51 999 999 999" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Correo Electrónico*</label>
+                  <input type="email" id="email" placeholder="ejemplo@tuempresa.com" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="industry">Industria</label>
+                  <select id="industry">
+                    <option value="" disabled selected>Selecciona tu industria</option>
+                    <option value="manufacturing">Manufactura</option>
+                    <option value="construction">Construcción</option>
+                    <option value="mining">Minería</option>
+                    <option value="food">Alimentaria</option>
+                    <option value="fishing">Pesquera</option>
+                    <option value="transport">Transporte</option>
+                    <option value="security">Seguridad</option>
+                    <option value="other">Otra</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Mensaje*</label>
+                  <textarea id="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="privacy" required>
+                  <label for="privacy">He leído y acepto la política de privacidad</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar mensaje</button>
+              </form>
+            </div>
+            
+            <div class="contact-info">
+              <div class="info-box">
+                <h3>Información de Contacto</h3>
+                <ul>
+                  <li>
+                    <i class="bx bx-envelope"></i>
+                    <div class="info-text">
+                      <span>Email:</span>
+                      <a href="mailto:informes@consultoriacarranza.com.pe">informes@consultoriacarranza.com.pe</a>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bx bx-phone"></i>
+                    <div class="info-text">
+                      <span>Teléfonos:</span>
+                      <div class="phone-numbers">
+                        <a href="tel:+51994615074">+51 994 615 074</a><br>
+                        <a href="tel:+51990022298">+51 990 022 298</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bx bx-map"></i>
+                    <div class="info-text">
+                      <span>Oficinas:</span>
+                      <address>
+                        Lima, Perú<br>
+                        (Atención previa cita)
+                      </address>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bx bx-time-five"></i>
+                    <div class="info-text">
+                      <span>Horario de atención:</span>
+                      <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="social-links">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-linkedin-square"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-instagram"></i>
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-facebook-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+          
+          <div class="faq-container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h3>¿Qué hardware necesito para implementar HARKAI?</h3>
+                  <i class="bx bx-plus"></i>
+                </div>
+                <div class="accordion-content">
+                  <p>
+                    HARKAI trabaja con nuestras cámaras inteligentes especialmente diseñadas para entornos industriales. Estas cámaras son resistentes a condiciones adversas como polvo, humedad y temperaturas extremas. Nuestro equipo se encarga de la instalación y configuración de todo el hardware necesario como parte del servicio.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h3>¿Cuánto tiempo toma implementar el sistema en mi empresa?</h3>
+                  <i class="bx bx-plus"></i>
+                </div>
+                <div class="accordion-content">
+                  <p>
+                    El tiempo de implementación varía según el tamaño de tu empresa y la complejidad de tus necesidades. Generalmente, una implementación básica puede completarse en 2-4 semanas, incluyendo la instalación del hardware, configuración del software y capacitación del personal. Implementaciones más grandes pueden tomar entre 1-3 meses.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h3>¿HARKAI puede adaptarse a diferentes tipos de EPPs?</h3>
+                  <i class="bx bx-plus"></i>
+                </div>
+                <div class="accordion-content">
+                  <p>
+                    Sí, nuestro sistema está diseñado para detectar y monitorear una amplia variedad de EPPs, incluyendo cascos, gafas de seguridad, protectores auditivos, guantes, arneses, mascarillas respiratorias y más. Además, podemos entrenar el sistema para reconocer EPPs específicos utilizados en tu industria.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h3>¿Cómo se integra HARKAI con los sistemas existentes en mi empresa?</h3>
+                  <i class="bx bx-plus"></i>
+                </div>
+                <div class="accordion-content">
+                  <p>
+                    HARKAI está diseñado para integrarse fácilmente con los sistemas existentes. Ofrecemos APIs que permiten la comunicación con sistemas ERP, SCADA, sistemas de gestión de seguridad, plataformas IoT y más. Nuestro equipo técnico trabaja estrechamente con tu departamento de IT para asegurar una integración sin problemas.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h3>¿Qué tipo de soporte y mantenimiento ofrecen?</h3>
+                  <i class="bx bx-plus"></i>
+                </div>
+                <div class="accordion-content">
+                  <p>
+                    Ofrecemos diferentes niveles de soporte según las necesidades de tu empresa, desde soporte básico hasta atención 24/7. Todos nuestros contratos incluyen mantenimiento preventivo, actualizaciones de software, monitoreo remoto y soporte técnico. También ofrecemos capacitación continua para tu personal a medida que el sistema evoluciona.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h3>¿Qué medidas de seguridad y privacidad implementa HARKAI?</h3>
+                  <i class="bx bx-plus"></i>
+                </div>
+                <div class="accordion-content">
+                  <p>
+                    La seguridad y privacidad son prioridades para nosotros. HARKAI cumple con las regulaciones de protección de datos y privacidad. Utilizamos encriptación de extremo a extremo, servidores seguros y acceso controlado a los datos. Nuestro sistema está diseñado para detectar el uso de EPPs sin almacenar información personal identificable de los trabajadores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+      <div class="container">
+        <div class="content">
+          <div class="demo-box" data-aos="fade-up" data-aos-duration="1000">
+            <div class="demo-content">
+              <h2>¿Prefieres ver HARKAI en acción?</h2>
+              <p>Solicita una demostración personalizada y descubre cómo nuestra tecnología puede transformar la seguridad en tu empresa.</p>
+              <a href="/demo" class="demo-btn">Solicitar Demo</a>
+            </div>
+            <div class="demo-image">
+              <img src="/assets/contact/demo-image.jpg" alt="Demostración de HARKAI" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</MainLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Form submission handling
+    const contactForm: HTMLFormElement | null = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e: Event) {
+        e.preventDefault();
+        
+        // Form validation
+        const requiredInputs: NodeListOf<HTMLInputElement | HTMLTextAreaElement> = 
+          this.querySelectorAll('[required]');
+        let isValid: boolean = true;
+        
+        requiredInputs.forEach((input: HTMLInputElement | HTMLTextAreaElement) => {
+          if (!input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');
+          } else {
+            input.classList.remove('error');
+          }
+        });
+        
+        // If valid, process form submission
+        if (isValid) {
+          // Disable form elements during submission
+          const formElements: NodeListOf<HTMLElement> = 
+            this.querySelectorAll('input, textarea, select, button');
+          formElements.forEach((element: HTMLElement) => {
+            if (element instanceof HTMLInputElement || 
+                element instanceof HTMLTextAreaElement || 
+                element instanceof HTMLSelectElement || 
+                element instanceof HTMLButtonElement) {
+              element.disabled = true;
+            }
+          });
+          
+          // Show loading indicator
+          const submitBtn: HTMLButtonElement | null = this.querySelector('.submit-btn');
+          if (submitBtn) {
+            const originalBtnText: string = submitBtn.textContent || '';
+            submitBtn.textContent = 'Enviando...';
+          }
+          
+          // Simulate server response
+          setTimeout(() => {
+            this.innerHTML = `
+              <div class="success-message">
+                <i class="bx bx-check-circle"></i>
+                <h3>¡Mensaje enviado con éxito!</h3>
+                <p>Gracias por contactarnos. Nos pondremos en contacto contigo lo antes posible.</p>
+              </div>
+            `;
+          }, 1500);
+        }
+      });
+    }
+    
+    // FAQ accordion functionality
+    const accordionItems: NodeListOf<HTMLElement> = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach((item: HTMLElement) => {
+      const header: HTMLElement | null = item.querySelector('.accordion-header');
+      const content: HTMLElement | null = item.querySelector('.accordion-content');
+      const icon: HTMLElement | null = item.querySelector('.accordion-header i');
+      
+      if (header && content && icon) {
+        header.addEventListener('click', () => {
+          // Check if current item is active
+          const isActive: boolean = item.classList.contains('active');
+          
+          // Close all accordion items
+          accordionItems.forEach((accItem: HTMLElement) => {
+            const accIcon: HTMLElement | null = accItem.querySelector('.accordion-header i');
+            const accContent: HTMLElement | null = accItem.querySelector('.accordion-content');
+            
+            accItem.classList.remove('active');
+            if (accContent) accContent.style.maxHeight = '';
+            if (accIcon) {
+              accIcon.classList.remove('bx-minus');
+              accIcon.classList.add('bx-plus');
+            }
+          });
+          
+          // If the clicked item wasn't active, open it
+          if (!isActive) {
+            item.classList.add('active');
+            content.style.maxHeight = `${content.scrollHeight}px`;
+            icon.classList.remove('bx-plus');
+            icon.classList.add('bx-minus');
+          }
+        });
+      }
+    });
+  });
+</script>

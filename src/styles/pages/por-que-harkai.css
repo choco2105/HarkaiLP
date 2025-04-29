@@ -1,0 +1,942 @@
+.ventaja .icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(241, 32, 47, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ventaja .icon i {
+    font-size: 2rem;
+    color: var(--primary);
+  }
+  
+  .ventaja h3 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  
+  .ventaja p {
+    color: var(--lightgray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Beneficios Section */
+  .beneficios {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(10, 5, 20, 0.9));
+    position: relative;
+  }
+  
+  .beneficios .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border: 2px solid var(--darkgray);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 16px;
+    transition: .2s linear;
+    width: 75%;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+  
+  .beneficios .title:hover {
+    border-top-color: var(--darkgray);
+    border-bottom-color: var(--darkgray);
+    transition: .2s linear;
+  }
+  
+  .beneficios .title h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .beneficios .title .light-1,
+  .beneficios .title .light-2 {
+    position: absolute;
+    width: 2px;
+    height: 35%;
+  }
+  
+  .beneficios .title .light-1 {
+    left: -2px;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+  
+  .beneficios .title .light-2 {
+    right: -2px;
+    background-color: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 10px var(--accent);
+  }
+  
+  /* Tabs de beneficios */
+  .beneficios-tabs {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tabs-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  
+  .tab-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(16, 16, 16, 0.4);
+    border: 1px solid var(--darkgray);
+    border-radius: 50px;
+    color: var(--lightgray);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-btn:hover {
+    background-color: rgba(241, 32, 47, 0.1);
+    color: var(--white);
+  }
+  
+  .tab-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+  }
+  
+  .tab-panel {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .tab-panel.active {
+    display: block;
+  }
+  
+  .panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(16, 16, 16, 0.4);
+    border: 1px solid var(--darkgray);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  
+  .panel-image {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .panel-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  .panel-text {
+    flex: 1;
+  }
+  
+  .panel-text h3 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+  
+  .panel-text p {
+    color: var(--lightgray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .panel-text ul {
+    padding-left: 1.5rem;
+  }
+  
+  .panel-text ul li {
+    color: var(--lightgray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  
+  .panel-text ul li::before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  /* Casos de Éxito */
+  .casos-exito {
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  .casos-exito .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border: 2px solid var(--darkgray);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 16px;
+    transition: .2s linear;
+    width: 75%;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+  
+  .casos-exito .title:hover {
+    border-top-color: var(--darkgray);
+    border-bottom-color: var(--darkgray);
+    transition: .2s linear;
+  }
+  
+  .casos-exito .title h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .casos-exito .title .light-1,
+  .casos-exito .title .light-2 {
+    position: absolute;
+    width: 2px;
+    height: 35%;
+  }
+  
+  .casos-exito .title .light-1 {
+    left: -2px;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+  
+  .casos-exito .title .light-2 {
+    right: -2px;
+    background-color: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 10px var(--accent);
+  }
+  
+  .casos-slider {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    position: relative;
+  }
+  
+  .caso {
+    display: none;
+  }
+  
+  .caso-content {
+    background-color: rgba(16, 16, 16, 0.4);
+    border: 1px solid var(--darkgray);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  
+  .logo-cliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo-cliente img {
+    max-width: 150px;
+    max-height: 60px;
+    object-fit: contain;
+  }
+  
+  blockquote {
+    position: relative;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  blockquote::before,
+  blockquote::after {
+    content: '"';
+    font-family: serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--primary);
+    opacity: 0.5;
+    position: absolute;
+  }
+  
+  blockquote::before {
+    left: 0;
+    top: -10px;
+  }
+  
+  blockquote::after {
+    right: 0;
+    bottom: -10px;
+    transform: rotate(180deg);
+  }
+  
+  blockquote p {
+    font-size: 1.1rem;
+    color: var(--white);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--lightgray);
+  }
+  
+  .resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .resultado {
+    text-align: center;
+  }
+  
+  .resultado h4 {
+    font-family: var(--montserrat);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .resultado p {
+    font-size: 0.9rem;
+    color: var(--lightgray);
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--darkgray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dot:hover {
+    background-color: var(--lightgray);
+  }
+  
+  .dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+  }
+  
+  /* Tecnología Section */
+  .tecnologia {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, rgba(10, 5, 20, 0.9), rgba(0, 0, 0, 0.8));
+    position: relative;
+  }
+  
+  .tecnologia .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border: 2px solid var(--darkgray);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 16px;
+    transition: .2s linear;
+    width: 75%;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+  
+  .tecnologia .title:hover {
+    border-top-color: var(--darkgray);
+    border-bottom-color: var(--darkgray);
+    transition: .2s linear;
+  }
+  
+  .tecnologia .title h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .tecnologia .title .light-1,
+  .tecnologia .title .light-2 {
+    position: absolute;
+    width: 2px;
+    height: 35%;
+  }
+  
+  .tecnologia .title .light-1 {
+    left: -2px;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+  
+  .tecnologia .title .light-2 {
+    right: -2px;
+    background-color: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 10px var(--accent);
+  }
+  
+  .tech-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tech-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tech-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(241, 32, 47, 0.3), rgba(133, 34, 226, 0.3));
+    pointer-events: none;
+  }
+  
+  .tech-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .tech-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: rgba(16, 16, 16, 0.4);
+    border: 1px solid var(--darkgray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tech-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(133, 34, 226, 0.1);
+    border-color: var(--accent);
+  }
+  
+  .feature-icon {
+    flex: 0 0 50px;
+    height: 50px;
+    background: rgba(241, 32, 47, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-icon i {
+    font-size: 1.8rem;
+    color: var(--primary);
+  }
+  
+  .feature-text {
+    flex: 1;
+  }
+  
+  .feature-text h3 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+  
+  .feature-text p {
+    color: var(--lightgray);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Comparativa Section */
+  .comparativa {
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  .comparativa .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border: 2px solid var(--darkgray);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 16px;
+    transition: .2s linear;
+    width: 75%;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+  
+  .comparativa .title:hover {
+    border-top-color: var(--darkgray);
+    border-bottom-color: var(--darkgray);
+    transition: .2s linear;
+  }
+  
+  .comparativa .title h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .comparativa .title .light-1,
+  .comparativa .title .light-2 {
+    position: absolute;
+    width: 2px;
+    height: 35%;
+  }
+  
+  .comparativa .title .light-1 {
+    left: -2px;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+  
+  .comparativa .title .light-2 {
+    right: -2px;
+    background-color: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 10px var(--accent);
+  }
+  
+  .tabla-comparativa {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  
+  .tabla-comparativa table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .tabla-comparativa table th,
+  .tabla-comparativa table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--darkgray);
+  }
+  
+  .tabla-comparativa table th {
+    background-color: rgba(241, 32, 47, 0.1);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .tabla-comparativa table th:first-child {
+    width: 30%;
+  }
+  
+  .tabla-comparativa table td:nth-child(2) {
+    color: var(--lightgray);
+  }
+  
+  .tabla-comparativa table td:nth-child(3) {
+    color: var(--primary);
+    font-weight: 500;
+  }
+  
+  .tabla-comparativa table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .tabla-comparativa table tr:nth-child(odd) td {
+    background-color: rgba(16, 16, 16, 0.4);
+  }
+  
+  .tabla-comparativa table tr:nth-child(even) td {
+    background-color: rgba(16, 16, 16, 0.2);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(66, 23, 108, 0.4));
+    position: relative;
+  }
+  
+  .cta-box {
+    background: linear-gradient(45deg, rgba(66, 23, 108, 0.8), rgba(133, 34, 226, 0.4));
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: rgba(241, 32, 47, 0.2);
+    filter: blur(120px);
+  }
+  
+  .cta-box::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: rgba(133, 34, 226, 0.2);
+    filter: blur(120px);
+    z-index: 1;
+  }
+  
+  .cta-box h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-box p {
+    color: var(--lightgray);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-box .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-box .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-box .btn.primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+  }
+  
+  .cta-box .btn.primary:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(241, 32, 47, 0.3);
+  }
+  
+  .cta-box .btn.secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+  }
+  
+  .cta-box .btn.secondary:hover {
+    background-color: var(--white);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .ventajas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .panel-content {
+      flex-direction: row;
+    }
+    
+    .resultados {
+      justify-content: space-around;
+    }
+    
+    .tech-grid {
+      flex-direction: row;
+    }
+    
+    .tech-image {
+      flex: 0 0 45%;
+    }
+    
+    .cta-box .buttons {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .ventajas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .page-hero h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .panel-text h3 {
+      font-size: 2.2rem;
+    }
+    
+    .panel-text p {
+      font-size: 1.1rem;
+    }
+    
+    .panel-text ul li {
+      font-size: 1rem;
+    }
+    
+    .feature-text h3 {
+      font-size: 1.4rem;
+    }
+    
+    .feature-text p {
+      font-size: 1rem;
+    }
+    
+    .cta-box h2 {
+      font-size: 2.5rem;
+    }
+  }/* Estilos para la página "¿Por qué HARKAI?" */
+  
+  /* Hero Section */
+  .page-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 12rem 0 6rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/assets/why/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: -12vh; /* Compensar la altura del header fijo */
+  }
+  
+  .page-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to top, var(--black), transparent);
+  }
+  
+  .page-hero .content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .page-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-family: var(--montserrat);
+  }
+  
+  .page-hero h1 span {
+    color: var(--primary);
+  }
+  
+  .page-hero p {
+    font-size: 1.2rem;
+    color: var(--lightgray);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Ventajas Section */
+  .ventajas {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ventajas .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border: 2px solid var(--darkgray);
+    border-top-color: var(--black);
+    border-bottom-color: var(--black);
+    border-radius: 16px;
+    transition: .2s linear;
+    width: 75%;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+  
+  .ventajas .title:hover {
+    border-top-color: var(--darkgray);
+    border-bottom-color: var(--darkgray);
+    transition: .2s linear;
+  }
+  
+  .ventajas .title h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .ventajas .title .light-1 {
+    position: absolute;
+    left: -2px;
+    width: 2px;
+    height: 35%;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+  
+  .ventajas .title .light-2 {
+    position: absolute;
+    right: -2px;
+    width: 2px;
+    height: 35%;
+    background-color: var(--accent);
+    box-shadow: 0 0 2px var(--accent), 0 0 10px var(--accent);
+  }
+  
+  .ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  .ventaja {
+    background-color: rgba(16, 16, 16, 0.5);
+    border: 1px solid var(--darkgray);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .ventaja:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(133, 34, 226, 0.2);
+    border-color: var(--accent);
+  }
+  
+  .ventaja .icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(241, 32, 47, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }

@@ -47,13 +47,16 @@ import '../styles/components/hero.css';
         >
           SEGURIDAD INTELIGENTE PARA ENTORNOS INDUSTRIALES
         </h2>
-        <h1
+        
+        <!-- Contenedor para la frase completa rotativa -->
+        <div 
+          id="rotating-phrase-container"
+          class="rotating-container"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="200"
-        >
-          Seguridad Laboral
-        </h1>
+        ></div>
+        
         <h1 class="highlight"
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -79,3 +82,115 @@ import '../styles/components/hero.css';
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    type Phrases = string[];
+    type FontSize = '4.8rem' | '4.2rem' | '3.8rem' | '3.2rem' | '2.8rem';
+
+    const phrases: Phrases = [
+      'Seguridad Laboral',
+      'Seguridad Industrial',
+      'Seguridad Urbana',
+      'Seguridad Residencial',
+      'Seguridad Minera',
+      'Seguridad Perimetral'
+    ];
+    
+    const containerElement = document.getElementById('rotating-phrase-container');
+    
+    if (!containerElement) {
+      console.error('Container element not found');
+      return;
+    }
+
+    const container = containerElement as HTMLElement;
+    let currentIndex = 0;
+    let isAnimating = false;
+    
+    const getFontSize = (): FontSize => {
+      const width = window.innerWidth;
+      if (width >= 1536) return '4.8rem';
+      if (width >= 1280) return '4.2rem';
+      if (width >= 1024) return '3.8rem';
+      if (width >= 610) return '3.2rem';
+      return '2.8rem';
+    };
+
+    function createPhraseElement(text: string, fontSize: FontSize): HTMLHeadingElement {
+      const element = document.createElement('h1');
+      element.className = 'phrase phrase-enter';
+      element.textContent = text;
+      element.style.fontFamily = 'var(--montserrat)';
+      element.style.fontWeight = 'bold';
+      element.style.fontSize = fontSize;
+      return element;
+    }
+
+    function displayPhrase(text: string, isFirst: boolean): void {
+      const fontSize = getFontSize();
+      const phraseElement = createPhraseElement(text, fontSize);
+      
+      container.appendChild(phraseElement);
+      
+      // Forzar reflow para asegurar animación fluida
+      void phraseElement.offsetHeight;
+      
+      requestAnimationFrame(() => {
+        if (isFirst) {
+          phraseElement.classList.remove('phrase-enter');
+          phraseElement.classList.add('phrase-visible');
+        } else {
+          setTimeout(() => {
+            phraseElement.classList.remove('phrase-enter');
+            phraseElement.classList.add('phrase-visible');
+          }, 50);
+        }
+      });
+    }
+    
+    function hidePhrase(phraseElement: HTMLElement): Promise<void> {
+      return new Promise(resolve => {
+        phraseElement.classList.remove('phrase-enter', 'phrase-visible');
+        phraseElement.classList.add('phrase-exit');
+        
+        phraseElement.addEventListener('transitionend', () => {
+          resolve();
+        }, { once: true });
+      });
+    }
+
+    async function nextPhrase(): Promise<void> {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const currentPhrase = container.querySelector<HTMLElement>('.phrase');
+      if (currentPhrase) {
+        await hidePhrase(currentPhrase);
+        currentPhrase.remove();
+      }
+      
+      currentIndex = (currentIndex + 1) % phrases.length;
+      displayPhrase(phrases[currentIndex], false);
+      
+      setTimeout(() => {
+        isAnimating = false;
+      }, 800);
+    }
+
+    // Mostrar la primera frase
+    displayPhrase(phrases[0], true);
+    
+    // Iniciar rotación
+    setInterval(nextPhrase, 5000);
+    
+    // Manejar cambios de tamaño de ventana
+    window.addEventListener('resize', () => {
+      const newFontSize = getFontSize();
+      const currentPhrase = container.querySelector<HTMLElement>('.phrase');
+      if (currentPhrase) {
+        currentPhrase.style.fontSize = newFontSize;
+      }
+    });
+  });
+</script>

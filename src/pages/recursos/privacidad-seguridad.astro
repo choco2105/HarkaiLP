@@ -1,0 +1,354 @@
+---
+// Importar el layout principal
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// Importar componentes
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Importar estilos específicos para esta página
+import '../../styles/pages/privacidad-seguridad.css';
+---
+
+<MainLayout title="Privacidad y Seguridad | HARKAI - Seguridad Laboral con IA">
+  <Header />
+  
+  <main class="privacidad-seguridad">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="fade-up" data-aos-duration="1000">
+            Privacidad y Seguridad
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            En HARKAI, la seguridad de tus datos y la privacidad de tu información son nuestra máxima prioridad
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Política de Privacidad Section -->
+    <section class="privacy-section">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Política de Privacidad</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="privacy-content">
+            <div class="privacy-card" data-aos="fade-up" data-aos-duration="1000">
+              <h3>Recopilación de Datos</h3>
+              <p>
+                En HARKAI, recopilamos información con el único propósito de mejorar nuestros servicios y garantizar la seguridad de tus operaciones. Nuestra tecnología de detección se centra exclusivamente en identificar el uso correcto de EPPs y situaciones de riesgo, sin almacenar información personal identificable de los trabajadores.
+              </p>
+              <p>
+                Los datos que recopilamos incluyen:
+              </p>
+              <ul>
+                <li>Imágenes de áreas de trabajo para la detección de EPPs (sin identificación facial)</li>
+                <li>Métricas de cumplimiento de seguridad</li>
+                <li>Información de incidentes y alertas generadas</li>
+                <li>Datos técnicos necesarios para el funcionamiento del sistema</li>
+              </ul>
+              <p>
+                Es importante destacar que todas las imágenes procesadas por nuestro sistema pasan por un algoritmo de anonimización que difumina los rostros automáticamente para proteger la privacidad de los trabajadores.
+              </p>
+            </div>
+
+            <div class="privacy-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <h3>Uso de la Información</h3>
+              <p>
+                La información recopilada por HARKAI se utiliza exclusivamente para:
+              </p>
+              <ul>
+                <li>Detectar y alertar sobre el uso incorrecto de EPPs</li>
+                <li>Identificar situaciones de riesgo en el entorno laboral</li>
+                <li>Generar informes estadísticos y métricas de seguridad</li>
+                <li>Mejorar nuestros algoritmos y la precisión del sistema</li>
+                <li>Proporcionar soporte técnico y mantenimiento</li>
+              </ul>
+              <p>
+                No utilizamos la información recopilada para evaluar el desempeño individual de los trabajadores, sino para mejorar la seguridad colectiva. Tampoco compartimos esta información con terceros sin tu consentimiento expreso, excepto cuando sea requerido por ley.
+              </p>
+            </div>
+
+            <div class="privacy-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <h3>Almacenamiento y Retención</h3>
+              <p>
+                Todos los datos recopilados se almacenan en servidores seguros con protocolos de encriptación avanzados. Implementamos estrictas políticas de retención de datos:
+              </p>
+              <ul>
+                <li>Las imágenes en bruto se procesan en tiempo real y no se almacenan, solo se conservan brevemente en memoria mientras se realiza el análisis</li>
+                <li>Los registros de incidentes y alertas se almacenan por un período de 90 días, tras el cual se anonimizan para fines estadísticos</li>
+                <li>Los datos agregados y estadísticos se conservan por periodos más largos con fines de análisis y mejora continua</li>
+              </ul>
+              <p>
+                Nuestros clientes tienen control total sobre sus datos y pueden solicitar la eliminación de estos en cualquier momento, de acuerdo con las políticas establecidas en el contrato de servicio.
+              </p>
+            </div>
+
+            <div class="privacy-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <h3>Cumplimiento Normativo</h3>
+              <p>
+                HARKAI cumple con las regulaciones de protección de datos más exigentes a nivel internacional, incluyendo:
+              </p>
+              <ul>
+                <li>Reglamento General de Protección de Datos (GDPR)</li>
+                <li>Ley de Protección de Datos Personales de Perú</li>
+                <li>Estándares ISO/IEC 27001 de seguridad de la información</li>
+                <li>Otras regulaciones específicas del sector industrial</li>
+              </ul>
+              <p>
+                Realizamos auditorías regulares de nuestros procesos y sistemas para garantizar el cumplimiento continuo de estas normativas y adaptarnos a nuevos requisitos legales que puedan surgir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medidas de Seguridad Section -->
+    <section class="security-section">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Medidas de Seguridad</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="security-grid">
+            <div class="security-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <div class="security-icon">
+                <i class="bx bx-lock-alt"></i>
+              </div>
+              <h3>Encriptación de Datos</h3>
+              <p>
+                Utilizamos encriptación de nivel militar (AES-256) para todos los datos en tránsito y en reposo. Todas las comunicaciones entre los componentes del sistema se realizan a través de canales seguros con TLS 1.3 y certificados validados.
+              </p>
+            </div>
+
+            <div class="security-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="security-icon">
+                <i class="bx bx-shield-quarter"></i>
+              </div>
+              <h3>Autenticación Multifactor</h3>
+              <p>
+                Implementamos autenticación de múltiples factores (MFA) para acceder a todas las interfaces administrativas y aplicaciones del sistema, garantizando que solo el personal autorizado pueda gestionar la información.
+              </p>
+            </div>
+
+            <div class="security-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="security-icon">
+                <i class="bx bx-scan"></i>
+              </div>
+              <h3>Monitoreo Continuo</h3>
+              <p>
+                Nuestros sistemas son monitoreados 24/7 por herramientas automatizadas de detección de amenazas y un equipo de seguridad especializado que responde inmediatamente ante cualquier evento sospechoso.
+              </p>
+            </div>
+
+            <div class="security-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="security-icon">
+                <i class="bx bx-reset"></i>
+              </div>
+              <h3>Actualizaciones Regulares</h3>
+              <p>
+                Mantenemos todos los componentes del sistema actualizados con los últimos parches de seguridad. Realizamos pruebas de seguridad rigurosas antes de implementar cualquier actualización en entornos de producción.
+              </p>
+            </div>
+
+            <div class="security-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+              <div class="security-icon">
+                <i class="bx bx-server"></i>
+              </div>
+              <h3>Infraestructura Segura</h3>
+              <p>
+                Nuestra infraestructura está alojada en centros de datos con certificaciones de seguridad ISO 27001, con acceso físico restringido, sistemas redundantes y respaldos automáticos cifrados en múltiples ubicaciones.
+              </p>
+            </div>
+
+            <div class="security-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <div class="security-icon">
+                <i class="bx bx-code-block"></i>
+              </div>
+              <h3>Desarrollo Seguro</h3>
+              <p>
+                Seguimos las mejores prácticas de desarrollo seguro (SSDLC) con análisis de código estático, pruebas de penetración regulares y revisiones de seguridad en cada fase del ciclo de desarrollo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificaciones Section -->
+    <section class="certifications-section">
+      <div class="container">
+        <div class="content">
+          <div class="title" data-aos="fade-down" data-aos-duration="1000">
+            <h2>Certificaciones y Cumplimiento</h2>
+            <div class="light-1"></div>
+            <div class="light-2"></div>
+          </div>
+
+          <div class="certifications-grid">
+            <div class="certification" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <div class="certification-logo">
+                <img src="/assets/resources/iso-27001-logo.png" alt="ISO 27001" />
+              </div>
+              <div class="certification-content">
+                <h3>ISO/IEC 27001</h3>
+                <p>
+                  Certificación internacional que garantiza que nuestro sistema de gestión de seguridad de la información cumple con los estándares más rigurosos del mercado.
+                </p>
+                <a href="#" class="btn">
+                  <span>Ver certificación</span>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="certification" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="certification-logo">
+                <img src="/assets/resources/gdpr-logo.png" alt="GDPR Compliant" />
+              </div>
+              <div class="certification-content">
+                <h3>GDPR Compliant</h3>
+                <p>
+                  Cumplimos con todas las disposiciones del Reglamento General de Protección de Datos de la Unión Europea, garantizando el máximo nivel de protección para la información personal.
+                </p>
+                <a href="#" class="btn">
+                  <span>Ver certificación</span>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="certification" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="certification-logo">
+                <img src="/assets/resources/soc2-logo.png" alt="SOC 2 Type II" />
+              </div>
+              <div class="certification-content">
+                <h3>SOC 2 Type II</h3>
+                <p>
+                  Certificación que valida nuestros controles y procesos de seguridad relacionados con la confidencialidad, integridad y disponibilidad de los datos procesados en nuestro sistema.
+                </p>
+                <a href="#" class="btn">
+                  <span>Ver certificación</span>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="certification" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="certification-logo">
+                <img src="/assets/resources/hipaa-logo.png" alt="HIPAA Compliant" />
+              </div>
+              <div class="certification-content">
+                <h3>HIPAA Compliant</h3>
+                <p>
+                  Para clientes del sector salud, nuestro sistema cumple con la Ley de Portabilidad y Responsabilidad de Seguros de Salud, garantizando la protección de la información médica sensible.
+                </p>
+                <a href="#" class="btn">
+                  <span>Ver certificación</span>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="certification" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+              <div class="certification-logo">
+                <img src="/assets/resources/owasp-logo.png" alt="OWASP Top 10" />
+              </div>
+              <div class="certification-content">
+                <h3>OWASP Top 10</h3>
+                <p>
+                  Nuestro desarrollo web sigue las recomendaciones de seguridad del proyecto Open Web Application Security Project, previniendo las vulnerabilidades más críticas en aplicaciones web.
+                </p>
+                <a href="#" class="btn">
+                  <span>Ver evaluación</span>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="certification" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <div class="certification-logo">
+                <img src="/assets/resources/pen-test-logo.png" alt="Penetration Testing" />
+              </div>
+              <div class="certification-content">
+                <h3>Penetration Testing</h3>
+                <p>
+                  Realizamos pruebas de penetración semestrales por empresas de seguridad independientes para identificar y corregir posibles vulnerabilidades en nuestros sistemas.
+                </p>
+                <a href="#" class="btn">
+                  <span>Ver último reporte</span>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="content">
+          <div class="cta-box" data-aos="fade-up" data-aos-duration="1000">
+            <h2>¿Tienes preguntas sobre nuestra política de privacidad?</h2>
+            <p>Nuestro equipo de seguridad y cumplimiento está disponible para resolver cualquier duda relacionada con la protección de datos y medidas de seguridad implementadas en HARKAI.</p>
+            <div class="buttons">
+              <a href="/compania/contactanos" class="btn primary">Contactar al equipo de seguridad</a>
+              <a href="/recursos/guias-de-usuario/seguridad" class="btn secondary">Guía de seguridad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</MainLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Script para manejar las interacciones en la página de privacidad y seguridad
+    
+    // Efecto hover para las tarjetas
+    const securityCards = document.querySelectorAll('.security-card');
+    securityCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const icon = card.querySelector('.security-icon i');
+        if (icon) {
+          icon.style.transform = 'scale(1.2)';
+          icon.style.transition = 'transform 0.3s ease';
+        }
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        const icon = card.querySelector('.security-icon i');
+        if (icon) {
+          icon.style.transform = 'scale(1)';
+        }
+      });
+    });
+    
+    // Efecto para botones de certificaciones
+    const certButtons = document.querySelectorAll('.certification .btn');
+    certButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        // Prevenir navegación para certificaciones no disponibles
+        if (button.getAttribute('href') === '#') {
+          e.preventDefault();
+          alert('La información detallada sobre esta certificación estará disponible próximamente. Por favor, contacta con nuestro equipo para más información.');
+        }
+      });
+    });
+  });
+</script>

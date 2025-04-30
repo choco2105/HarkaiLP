@@ -26,6 +26,9 @@ import '../styles/global.css';
       rel="stylesheet"
     />
 
+    <!-- BoxIcons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -51,8 +54,7 @@ import '../styles/global.css';
   <body>
     <slot /> <!-- Aquí se inserta el contenido de la página -->
 
-    <!-- BoxIcons y AOS antes de los scripts personalizados -->
-    <script is:inline src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- AOS antes de los scripts personalizados -->
     <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Script para inicializar AOS -->

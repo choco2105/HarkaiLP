@@ -207,3 +207,60 @@
       font-size: 1rem;
     }
   }
+
+  /* Añadir al final de tu archivo howitworks.css */
+
+/* Estilos para las imágenes en los pasos */
+.how-it-works .container .content .step .step-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 1.2rem 0;
+  border: 1px solid var(--dark);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.how-it-works .container .content .step:hover .step-image {
+  box-shadow: 0 8px 25px rgba(133, 34, 226, 0.2);
+}
+
+.how-it-works .container .content .step .step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.how-it-works .container .content .step:hover .step-image img {
+  transform: scale(1.05);
+}
+
+/* Ajustes para los pasos */
+.how-it-works .container .content .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media queries para responsividad */
+@media (min-width: 610px) {
+  .how-it-works .container .content .step .step-image {
+    height: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .how-it-works .container .content .steps {
+    gap: 1.5rem;
+  }
+  
+  .how-it-works .container .content .step {
+    padding: 2rem;
+  }
+  
+  .how-it-works .container .content .step .step-image {
+    height: 160px;
+  }
+}
